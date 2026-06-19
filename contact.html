@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="js/script.js" defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | MCSI</title>
+    <meta name="description" content="Get in touch with the Mabopane Community Swim Initiative team or view our central base office layout map at Mabopane Square.">
+    <meta name="keywords" content="contact MCSI, Mabopane swimming phone number, Mabopane Square location">
+    <title>Contact Us | Mabopane Community Swim Initiative</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
-    <!-- Header must be the first thing inside the body -->
     <header>
         <nav>
             <ul>
@@ -16,7 +22,7 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="registration.html">Register</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -25,16 +31,21 @@
         <h1>Contact Us</h1>
         <p>Have questions? Reach out to our team or visit us at our partner resorts.</p>
         
-        <div class="contact-info">
-            <p><strong>Email:</strong> info@mcsi-mabopane.org.za</p>
-            <p><strong>Phone:</strong> +27 12 345 6789</p>
-            <p><strong>Address:</strong> Mabopane Square, Block B, Mabopane</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>Email:</strong> info@mcsi-mabopane.org.za</p>
+                <p><strong>Phone:</strong> +27 12 345 6789</p>
+                <p><strong>Address:</strong> Mabopane Square, Block B, Mabopane</p>
+            </div>
+
+            <div id="map" style="height: 300px; width: 100%; margin-top: 20px; border-radius: 8px;"></div>
         </div>
 
-        <!-- Professional form structure for Part 2 -->
-        <form action="#" method="post">
+        <form id="contactForm" action="#" method="post" novalidate style="margin-top: 30px;">
             <label for="msg">Message:</label>
-            <textarea id="msg" name="msg" rows="4" style="width: 100%;" placeholder="How can we help?"></textarea>
+            <textarea id="msg" name="msg" rows="4" placeholder="How can we help you?"></textarea>
+            <span id="msgError" class="error-text"></span>
+            
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
     </main>

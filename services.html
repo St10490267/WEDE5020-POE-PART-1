@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="js/script.js" defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | MCSI</title>
+    <meta name="description" content="Explore and filter our dynamic aquatic training frameworks, ranging from foundational water safety up to junior lifesaving certificates in Mabopane.">
+    <meta name="keywords" content="water safety 101, beginner swimming strokes, junior lifesaving Mabopane, filter swimming lessons">
+    <title>Services | Mabopane Community Swim Initiative</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -13,7 +16,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
                 <li><a href="registration.html">Register</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -22,34 +25,25 @@
 
     <main>
         <h1>Our Swimming Programmes</h1>
-        <p>We offer structured lessons tailored to the learner's current ability.</p>
+        <p>Use the controls below to dynamically search, filter, and sort through our available training tracks.</p>
 
-        <table class="services-table">
-            <thead>
-                <tr>
-                    <th>Programme</th>
-                    <th>Focus Area</th>
-                    <th>Target Age</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Water Safety 101</td>
-                    <td>Floating & Breathing</td>
-                    <td>6 - 10 years</td>
-                </tr>
-                <tr>
-                    <td>Beginner Strokes</td>
-                    <td>Freestyle & Backstroke</td>
-                    <td>8 - 14 years</td>
-                </tr>
-                <tr>
-                    <td>Junior Lifesaving</td>
-                    <td>Rescue skills & Fitness</td>
-                    <td>15 - 18 years</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="filter-toolbar" style="margin-bottom: 25px; display: flex; gap: 15px; flex-wrap: wrap; background-color: #f9f9f9; padding: 15px; border-radius: 6px; border: 1px solid #e0e0e0;">
+            <div style="flex: 1; min-width: 200px;">
+                <label for="searchBar" style="display: block; font-weight: bold; margin-bottom: 5px;">Search Programmes:</label>
+                <input type="text" id="searchBar" placeholder="Type to filter e.g. Safety, Beginner..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="min-width: 180px;">
+                <label for="sortSelector" style="display: block; font-weight: bold; margin-bottom: 5px;">Sort By Minimum Age:</label>
+                <select id="sortSelector" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <option value="default">Default Order</option>
+                    <option value="age-asc">Age: Low to High</option>
+                    <option value="age-desc">Age: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="programmes-container" class="accordion-container">
+            </div>
     </main>
 
     <footer>

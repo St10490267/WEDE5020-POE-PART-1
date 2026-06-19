@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="js/script.js" defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | MCSI</title>
+    <meta name="description" content="Register your child with the Mabopane Community Swim Initiative. Secure an educational swimming placement online.">
+    <meta name="keywords" content="swim registration Mabopane, enroll child swimming, free aquatic safety">
+    <title>Register | Mabopane Community Swim Initiative</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -14,7 +17,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="registration.html">Register</a></li>
+                <li><a href="registration.html" class="active">Register</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -23,32 +26,40 @@
     <main>
         <section>
             <h1>Learner Registration</h1>
-            <p>Please fill out the form below to enroll a child in the Mabopane Community Swim Initiative.</p>
+            <p>Please complete the enrollment form below. All fields are cross-validated for processing safety.</p>
             
-            <form action="#" method="post">
+            <form id="registrationForm" action="#" method="post" novalidate>
                 <fieldset>
                     <legend>Guardian Information</legend>
-                    <label for="parentName">Parent/Guardian Name:</label>
-                    <input type="text" id="parentName" name="parentName" required>
+                    
+                    <label for="parentName">Parent/Guardian Full Name:</label>
+                    <input type="text" id="parentName" name="parentName">
+                    <span id="parentNameError" class="error-text"></span>
 
                     <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email">
+                    <span id="emailError" class="error-text"></span>
                 </fieldset>
 
                 <fieldset>
                     <legend>Learner Details</legend>
-                    <label for="childName">Child's Name:</label>
-                    <input type="text" id="childName" name="childName" required>
+                    
+                    <label for="childName">Child's Full Name:</label>
+                    <input type="text" id="childName" name="childName">
+                    <span id="childNameError" class="error-text"></span>
 
-                    <label for="age">Child's Age:</label>
-                    <input type="number" id="age" name="age" min="5" max="18">
+                    <label for="age">Child's Age (5 - 18):</label>
+                    <input type="number" id="age" name="age">
+                    <span id="ageError" class="error-text"></span>
 
-                    <label for="level">Swimming Level:</label>
+                    <label for="level">Swimming Competency Level:</label>
                     <select id="level" name="level">
+                        <option value="">-- Select Level --</option>
                         <option value="beginner">Beginner (No experience)</option>
                         <option value="intermediate">Intermediate (Can float)</option>
                         <option value="advanced">Advanced (Can swim laps)</option>
                     </select>
+                    <span id="levelError" class="error-text"></span>
                 </fieldset>
 
                 <button type="submit" class="submit-btn">Submit Registration</button>
@@ -59,5 +70,6 @@
     <footer>
         <p>&copy; 2026 MCSI - Student Number: ST10490267</p>
     </footer>
+
 </body>
 </html>
