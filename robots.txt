@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Link to your live structural sitemap index file
-Sitemap: https://your-netlify-subdomain.netlify.app/sitemap.xml
+Sitemap: https://lovely-bonbon-026fc3.netlify.app
