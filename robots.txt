@@ -1,8 +1,6 @@
-# 1. Stage absolutely everything in your folder
-git add .
+# Robots.txt file for Mabopane Community Swim Initiative
+User-agent: *
+Allow: /
 
-# 2. Make an official final Part 3 submission commit
-git commit -m "Feat: Complete Part 3 requirements including dynamic search, form validation, and SEO assets"
-
-# 3. Force push the new code to replace the old files on GitHub completely
-git push origin main --force
+# Link to your live structural sitemap index file
+Sitemap: https://your-netlify-subdomain.netlify.app/sitemap.xml
